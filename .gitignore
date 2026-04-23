@@ -3,4 +3,5 @@
 .checkpoints/
 .agent.log
 node_modules/
+.DS_Store
 task-skills/**/*.md
