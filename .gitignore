@@ -3,3 +3,4 @@
 .checkpoints/
 .agent.log
 node_modules/
+task-skills/**/*.md
