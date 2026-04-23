@@ -1,14 +1,11 @@
 {
   "name": "tool-use",
   "version": "0.1.0",
-  "type": "module",
   "bin": {
     "tool-use": "./run.ts"
   },
   "scripts": {
     "test": "bun test"
   },
-  "dependencies": {
-    "playwright": "^1.59.1"
-  }
+  "type": "module"
 }
