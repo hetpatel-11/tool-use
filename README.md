@@ -1,3 +1,5 @@
+<img src="resources/image.png" alt="tool-use" width="100%" />
+
 # tool-use
 
 The simplest, thinnest library that lets an LLM **build its own tools on the fly.**
