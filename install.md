@@ -2,46 +2,41 @@
 
 ## Requirements
 
-- Python 3.11+
-- [uv](https://docs.astral.sh/uv/) (recommended) or pip
+- [Bun](https://bun.sh) — `curl -fsSL https://bun.sh/install | bash`
 
 ## Setup
 
 ```bash
-# install globally so `agent-harness` is on $PATH
-uv tool install .
-
-# verify
-agent-harness --help
+git clone https://github.com/hetpatel-11/tool-use
+cd tool-use
+bun install
 ```
 
-Or without uv:
+Add the CLI to your path:
+
 ```bash
-pip install -e .
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc  # or ~/.bashrc
+source ~/.zshrc
+
+mkdir -p ~/.local/bin
+cat > ~/.local/bin/tool-use << EOF
+#!/bin/sh
+exec bun run "$(pwd)/run.ts" "\$@"
+EOF
+chmod +x ~/.local/bin/tool-use
 ```
 
-## First run
+## Verify
 
 ```bash
-agent-harness <<'PY'
-r = shell("echo hello from agent-harness")
-print(r["stdout"])
-PY
+tool-use <<'TS'
+const r = shell("echo hello from tool-use")
+console.log(r.stdout)
+TS
 ```
 
-## Environment variables
-
-Copy `.env.example` to `.env` and fill in any keys your tasks need:
+## Run tests
 
 ```bash
-cp .env.example .env
-```
-
-Variables in `.env` are auto-loaded by helpers.py at runtime.
-
-## Updating
-
-```bash
-git pull
-uv tool install . --force
+bun test
 ```
