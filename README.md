@@ -20,7 +20,7 @@ The agent writes what's missing, mid-task. No tool registry, no framework, no pr
 
 ## Setup prompt
 
-Paste into Claude Code or Codex:
+Paste into your agent:
 
 ```text
 Set up https://github.com/hetpatel-11/tool-use for me.
