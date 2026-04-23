@@ -5,7 +5,9 @@ import {
   checkpoint, restore, checkpoints, checkpointClear,
   saveSkill, listSkills, skill,
   log, readLog,
+  ROOT,
 } from "../helpers.ts"
+import { join } from "path"
 
 // --- shell ---
 
@@ -151,8 +153,7 @@ describe("checkpoint / restore", () => {
 
 describe("skills", () => {
   afterEach(() => {
-    // clean up test skills
-    try { shell("rm -rf /Users/hetpatel/Desktop/agent-harness/task-skills/test-*") } catch {}
+    shell(`rm -rf "${join(ROOT, "task-skills/test-skill")}"`)
   })
 
   it("saveSkill creates a skill file", () => {
