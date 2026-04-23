@@ -1,0 +1,5 @@
+.env
+.cache/
+.checkpoints/
+.agent.log
+node_modules/
