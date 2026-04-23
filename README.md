@@ -73,7 +73,7 @@ const repo = await githubRepo("vercel", "next.js")
 
 ## Acknowledgements
 
-Inspired by [browser-harness](https://github.com/browser-use/browser-harness) by [Gregor Žunič](https://github.com/gregorzunic) — which proved that the self-extending helpers pattern works. browser-harness applies it to browser automation via CDP. tool-use generalises it to any capability an agent might need.
+Inspired by [browser-harness](https://github.com/browser-use/browser-harness) by [Gregor Žunič](https://github.com/gregpr07) — which proved that the self-extending helpers pattern works. browser-harness applies it to browser automation via CDP. tool-use generalises it to any capability an agent might need.
 
 ## Contributing
 
