@@ -50,7 +50,6 @@ checkpoint(name, data)              // save task state mid-run
 restore(name)                       // pick up where you crashed
 saveSkill(name, content)            // contribute knowledge back
 log(msg) / readLog()                // structured logging
-cdpConnect()                        // raw CDP — control a real browser
 ROOT / HELPERS_TS                   // stable paths for self-extension
 ```
 

@@ -64,7 +64,7 @@ for await (const chunk of process.stdin) chunks.push(chunk)
 const agentCode = Buffer.concat(chunks).toString()
 
 const helperPath = join(ROOT, "helpers.ts")
-const wrapped = `import { shell, httpGet, httpPost, paginate, cache, cacheClear, checkpoint, restore, checkpoints, checkpointClear, skill, listSkills, saveSkill, log, readLog, cdpConnect, cdp, browserScreenshot, browserGoto, browserClick, browserType, browserJs, browserPageInfo, ROOT, HELPERS_TS } from "${helperPath}"
+const wrapped = `import { shell, httpGet, httpPost, paginate, cache, cacheClear, checkpoint, restore, checkpoints, checkpointClear, skill, listSkills, saveSkill, log, readLog, ROOT, HELPERS_TS } from "${helperPath}"
 
 ${agentCode}`
 
